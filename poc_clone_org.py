@@ -53,7 +53,8 @@ def fetch_template_ids(org_id, source_organization_id):
         'switch_template_id': f'{config_vars["base_url"]}/orgs/{org_id}/networktemplates',
         'wan_edge_template_id': f'{config_vars["base_url"]}/orgs/{org_id}/gatewaytemplates',
         'wlan_template_id': f'{config_vars["base_url"]}/orgs/{org_id}/templates',
-        'service_policies': f'{config_vars["base_url"]}/orgs/{source_organization_id}/servicepolicies'
+        'service_policies': f'{config_vars["base_url"]}/orgs/{source_organization_id}/servicepolicies',
+        'rftemplate_id': f'{config_vars["base_url"]}/orgs/{org_id}/rftemplates'
     }
     
     for key, url in endpoints.items():
@@ -73,7 +74,8 @@ def assign_templates(org_id, site_id, template_ids):
     assignments = {
         'switch_template_id': {"networktemplate_id": template_ids.get('switch_template_id')},
         'wlan_template_id': {"applies": {"org_id": org_id}},
-        'wan_edge_template_id': {"gatewaytemplate_id": template_ids.get('wan_edge_template_id')}
+        'wan_edge_template_id': {"gatewaytemplate_id": template_ids.get('wan_edge_template_id')},
+        'rftemplate_id': {"rftemplate_id": template_ids.get('rftemplate_id')}
     }
     
     for key, payload in assignments.items():

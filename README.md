@@ -38,7 +38,7 @@ This Python program is designed to automate the creation of a cloned version of 
 
 1. **Requirements**:
    - Ensure that you have installed the packages found in requirements.txt.
-   - Verify you have a valid API token to the MSP instance in Mist that has the baseline ORG for cloning with the correct access.
+   - Verify you have a valid API token to the MSP instance BASELINE_POC_ORG in Mist that has the baseline ORG for cloning with the correct access.
 
 2. **Configuration**:
    - Update the `example_config.ini` file with the necessary variables, including the API token, source organization ID, new organization name, new site name, and superuser details. All required information in the configuration file are marked in the "# REQUIRED INFORMATION" section.
