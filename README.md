@@ -43,7 +43,7 @@ This Python program is designed to automate the creation of a cloned version of 
 2. **Configuration**:
    - Update the `example_config.ini` file with the necessary variables, including the API token, source organization ID, new organization name, new site name, and superuser details. All required information in the configuration file are marked in the "# REQUIRED INFORMATION" section.
    - When adding Super Users to an ORG, they will only be assigned to the organization with full access to the entire organization. An invite will be sent to them immediately and they will have 24 hours to accept their invite; otherwise, you will have to resend the invitation.
-     - You must utilize the format perscribed in the `example_config.ini`:
+     - You must utilize the format prescribed in the `example_config.ini`:
      - For example: {email}:FirstName:LastName,{email}:FirstName:LastName
    - Save the newly edited `example_config.ini` in the same directory as the python program `baseline_org_clone.py` as `config.ini`.
          - This will ensure that you config.ini does change on updates and updates can be merged.
