@@ -38,7 +38,7 @@ This Python program is designed to automate the creation of a cloned version of 
 
 1. **Requirements**:
    - Ensure that you have installed the packages found in requirements.txt.
-   - Verify you have a valid API token to the MSP instance BASELINE_POC_ORG in Mist that has the baseline ORG for cloning with the correct access.
+   - Verify you have a valid API token to the MSP instance for **your** BASELINE_POC_ORG in Mist that has the baseline ORG for cloning with the correct access.
 
 2. **Configuration**:
    - Update the `example_config.ini` file with the necessary variables, including the API token, source organization ID, new organization name, new site name, and superuser details. All required information in the configuration file are marked in the "# REQUIRED INFORMATION" section.
@@ -46,8 +46,8 @@ This Python program is designed to automate the creation of a cloned version of 
      - You must utilize the format prescribed in the `example_config.ini`:
      - For example: {email}:FirstName:LastName,{email}:FirstName:LastName
    - Save the newly edited `example_config.ini` in the same directory as the python program `baseline_org_clone.py` as `config.ini`.
-         - This will ensure that you config.ini does change on updates and updates can be merged.
-   - Do not make edits to the "# DO NOT CHANGE # section.
+         - This will ensure that your config.ini does change on updates and updates can be merged as needed.
+   - Do not make edits to the "# DO NOT CHANGE # section once you have it configured as applicable.
 
 3. **Execution**:
    - Run the program to clone the organization, create the new site, copy settings, assign templates, copy application policies, and invite super users.
