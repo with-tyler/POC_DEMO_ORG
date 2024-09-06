@@ -62,8 +62,11 @@ This Python program is designed to automate the creation of a cloned version of 
 6. **WAN Edge Configuration**:
    - The WAN Edge template utilizes port ge-0/0/0 for its WAN1 link only.
    - Port ge-0/0/1 is utilized as a trunk with Native VLAN ID for downlink to the switch.
+   - The WAN edge policy will Assign a Path of "WAN1" for all policies that do not include "BLOCK" in the title. Where it will use the Traffic steering path of "INTERNAL" if found.
 
-7. **Adopt Devices into Inventory for Deployment**:
+![Block Policy Example](assets/Screenshot%202024-09-06%20at%201.39.39 PM.png)
+
+1. **Adopt Devices into Inventory for Deployment**:
    - Once inventory is adopted, all configurations will be applied as devices are assigned to the site created in the new ORG.
 
 Note: Review all configurations and make modifications to the any piece of the configuration. If a simple VLAN or network change is required, please use the site variables section to do so. Some configurations in the WAN Edge template cannot use site variables, ensure those settings match accordingly.

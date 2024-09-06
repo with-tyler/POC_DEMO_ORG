@@ -95,7 +95,8 @@ def assign_templates(org_id, site_id, template_ids):
                 pol_id = response.json()["id"]
                 service_policy = {
                     'servicepolicy_id': pol_id,
-                    'path_preference': "INTERNAL" if response.json()['name'] == "GUEST_BLOCK_INTERNAL" else "WAN1"
+                    # This section basically will Assign WAN1 unless the policy name contains "BLOCK".
+                    'path_preference': "INTERNAL" if "BLOCK" in response.json()['name'] else "WAN1"
                 }
                 new_template_policies.append(service_policy)
             else:
